@@ -861,7 +861,7 @@ $(document).ready(function() {
 	var millisPerDay = 1000 * 60 * 60 * 24
 
 	// Update the count down every 1 second
-	var x = setInterval(function() {
+	var intervalFn = function() {
 
 		// Get todays date and time
 		var now = new Date().getTime();
@@ -896,7 +896,9 @@ $(document).ready(function() {
 				document.getElementById("counter-final-message").innerHTML = "Il Matrimonio è oggi!";
 			}
 		}
-	}, 1000);
+	}
+	intervalFn()
+	var x = setInterval(intervalFn, 1000);
 
 	// Document on load.
 
