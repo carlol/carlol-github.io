@@ -865,6 +865,4 @@ $(document).ready(function() {
 		contentWayPoint();
 		stickyBanner();
 	});
-
-
 }());
